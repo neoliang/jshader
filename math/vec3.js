@@ -20,15 +20,15 @@ jshader.vec3 .prototype = {
 
 
 	add: function ( v ) {
-		return new vec3(this.x + v.x,this.y + v.y,this.z + v.z);
+		return new this.constructor(this.x + v.x,this.y + v.y,this.z + v.z);
 	},
 
 	addScalar: function ( s ) {
-		return new vec3(this.x + s,this.y + s,this.z + s);
+		return new this.constructor(this.x + s,this.y + s,this.z + s);
 	},
 
 	sub: function ( v ) {
-		return new vec3(this.x - v.x,this.y - v.y,this.z-v.z);
+		return new this.constructor(this.x - v.x,this.y - v.y,this.z-v.z);
 
 	},
 
@@ -38,15 +38,15 @@ jshader.vec3 .prototype = {
 
 
 	multiply: function ( v ) {
-		return new vec3(this.x * v.x,this.y * v.y,this.z * v.z);
+		return new this.constructor(this.x * v.x,this.y * v.y,this.z * v.z);
 	},
 
 	multiplyScalar: function ( scalar ) {
-		return new vec3(this.x * scalar,this.y * scalar,this.z * scalar);
+		return new this.constructor(this.x * scalar,this.y * scalar,this.z * scalar);
 	},
 
 	divide: function ( v ) {
-		return new vec3(this.x /v.x ,this.y /v.y,this.z/ v.z);
+		return new this.constructor(this.x /v.x ,this.y /v.y,this.z/ v.z);
 	},
 
 	divideScalar: function ( scalar ) {

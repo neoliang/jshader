@@ -21,15 +21,15 @@ jshader.vec4 .prototype = {
 
 
 	add: function ( v ) {
-		return new vec4(this.x + v.x,this.y + v.y,this.z + v.z,this.w + v.w);
+		return new this.constructor(this.x + v.x,this.y + v.y,this.z + v.z,this.w + v.w);
 	},
 
 	addScalar: function ( s ) {
-		return new vec4(this.x + s,this.y + s,this.z + s,this.w + s);
+		return new this.constructor(this.x + s,this.y + s,this.z + s,this.w + s);
 	},
 
 	sub: function ( v ) {
-		return new vec4(this.x - v.x,this.y - v.y,this.z-v.z,this.w + v.w);
+		return new this.constructor(this.x - v.x,this.y - v.y,this.z-v.z,this.w + v.w);
 
 	},
 
@@ -39,15 +39,15 @@ jshader.vec4 .prototype = {
 
 
 	multiply: function ( v ) {
-		return new vec4(this.x * v.x,this.y * v.y,this.z * v.z,this.w * v.w);
+		return new this.constructor(this.x * v.x,this.y * v.y,this.z * v.z,this.w * v.w);
 	},
 
 	multiplyScalar: function ( scalar ) {
-		return new vec4(this.x * scalar,this.y * scalar,this.z * scalar,this.w * scalar);
+		return new this.constructor(this.x * scalar,this.y * scalar,this.z * scalar,this.w * scalar);
 	},
 
 	divide: function ( v ) {
-		return new vec4(this.x /v.x ,this.y /v.y,this.z/ v.z,this.w /v.w);
+		return new this.constructor(this.x /v.x ,this.y /v.y,this.z/ v.z,this.w /v.w);
 	},
 
 	divideScalar: function ( scalar ) {

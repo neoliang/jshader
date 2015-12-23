@@ -1,0 +1,22 @@
+<p>测试render</p>
+<script type="text/javascript" src="./jshader.js"></script>
+<script type="text/javascript" src="./render/renderer.js"></script>
+<script type="text/javascript" src="./render/renderTarget.js"></script>
+<script type="text/javascript" src="./math/vec3.js"></script>
+<script type="text/javascript" src="./math/vec2.js"></script>
+<script type="text/javascript" src="./math/vec4.js"></script>
+
+<p><textarea id="canvasTestCode" rows="20" cols="60">
+function renderPiexel(x,y)
+{
+	return new jshader.vec4(1,y,x,1);
+}
+</textarea></p>
+<p><button onclick="eval(document.getElementById('canvasTestCode').value + 'renderer.piexelRenderFunc = renderPiexel;renderer.render();')" type="button">Run</button></p>
+<script type="text/javascript">// <![CDATA[
+document.write('<canvas width="256" height="256" id="testCanvas"></canvas>');
+var canvas = document.getElementById("testCanvas");var target = new jshader.renderTarget(canvas);
+var renderer = new jshader.renderer(target);
+var width = renderer.width;
+var height = renderer.height;
+// ]]></script>

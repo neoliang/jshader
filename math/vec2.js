@@ -18,34 +18,34 @@ jshader.vec2 .prototype = {
 
 
 	add: function ( v ) {
-		return new vec2(this.x + v.x,this.y + v.y);
+		return new this.constructor(this.x + v.x,this.y + v.y);
 	},
 
 	addScalar: function ( s ) {
-		return new vec2(this.x + s,this.y + s);
+		return new this.constructor(this.x + s,this.y + s);
 	},
 
 	sub: function ( v ) {
-		return new vec2(this.x - v.x,this.y - v.y);
+		return new this.constructor(this.x - v.x,this.y - v.y);
 
 	},
 
 	subScalar: function ( s ) {
-		return new vec2(this.x - s,this.y - s);
+		return new this.constructor(this.x - s,this.y - s);
 	},
 
 
 
 	multiply: function ( v ) {
-		return new vec2(this.x * v.x,this.y * v.y);
+		return new this.constructor(this.x * v.x,this.y * v.y);
 	},
 
 	multiplyScalar: function ( scalar ) {
-		return new vec2(this.x * scalar,this.y * scalar);
+		return new this.constructor(this.x * scalar,this.y * scalar);
 	},
 
 	divide: function ( v ) {
-		return new vec2(this.x /v.x ,this.y /v.y);
+		return new this.constructor(this.x /v.x ,this.y /v.y);
 	},
 
 	divideScalar: function ( scalar ) {
