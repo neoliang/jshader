@@ -10,7 +10,7 @@ jshader.renderer.prototype = {
 	constructor: jshader.render,
 
 	renderPixel : function  (x,y) {
-		return vec4(1,1,1,1);
+		return vec4(1,1,x,y);
 	},
 	render : function  () {
 		var pixels = this.target.beginRender();
