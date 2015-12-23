@@ -11,7 +11,7 @@ jshader.renderTarget.prototype = {
 	constructor: jshader.renderTarget,
 	beginRender : function  () {
 		this.context.fillStyle = "rdb(0,0,0)";
-		this.context.fillRect(0,this.width,this.height);
+		this.context.fillRect(0,0,this.width,this.height);
 		this.imgdata = this.context.getImageData(0,0,this.width,this.height)
 		return data;
 	},
