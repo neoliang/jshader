@@ -17,7 +17,6 @@ jshader.renderTarget.prototype = {
 	},
 
 	endRender : function  () {
-		alert(this.imgdata);
 		this.context.putImageData(this.imgdata, 0, 0);
 	}
 };
