@@ -83,7 +83,7 @@ jshader.vec4 .prototype = {
 	},
 
 	equals: function ( v ) {
-		return ( ( v.x === this.x ) && ( v.y === this.y ) &&( v.z === this.z)  && (v. === this.w));
+		return ( ( v.x === this.x ) && ( v.y === this.y ) &&( v.z === this.z)  && (v.w === this.w));
 	}
 
 };

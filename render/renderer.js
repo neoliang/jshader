@@ -11,7 +11,7 @@ jshader.renderer.prototype = {
 
 	renderPixel : function  (x,y) {
 		return vec4(1,1,1,1);
-	}
+	},
 	render : function  () {
 		var pixels = this.target.beginRender();
 		var height = this.target.height;
