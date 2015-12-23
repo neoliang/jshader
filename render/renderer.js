@@ -1,8 +1,9 @@
 
-jshader.renderer = function(target){
+jshader.renderer = function(target,piexelRenderFunc){
 	this.target = target;
 	this.width = target.width;
 	this.height = target.height;
+	this.piexelRenderFunc = piexelRenderFunc;
 };
 
 jshader.renderer.prototype = {

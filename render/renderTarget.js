@@ -1,6 +1,5 @@
 
-jshader.renderTarget = function  (canvasId) {
-	var canvas = document.getElementsById(canvasId)
+jshader.renderTarget = function  (canvas) {
 	this.context = canvas.getContext("2d");
 	this.width = canvas.attributes.width.value;
 	this.height = canvas.attributes.height.value;
