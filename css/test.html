@@ -1,0 +1,75 @@
+<p>测试 lua</p>
+
+    <!-- Le styles -->
+    
+
+<script type="text/javascript">
+	document.write('<link href="./bootstrap.css" rel="stylesheet">\n<link href="http://kripken.github.io/lua.vm.js/css/bootstrap-responsive.css" rel="stylesheet">\n<link rel="stylesheet" href="./codemirror.css">\n')
+</script>
+<link rel="stylesheet" href="./monokai.css" >
+<script type="text/javascript" src="http://kripken.github.io/lua.vm.js/js/codemirror.js"></script>
+
+<script type="text/javascript" src="http://kripken.github.io/lua.vm.js/js/lua.js"></script>
+
+    <div class="container">
+
+
+      <div class="row">
+        <div class="span8" border=1>
+          <textarea id="mytext" >
+</textarea>
+        </div>
+        </div>
+              <p><p><a href="#" class="btn btn-primary btn-small " onclick="executeLua(myCodeMirror.getValue(), true); return false" id="the_button">Execute &raquo;</a></p></p>
+      <div class="row">
+        <div class="span7">
+          <h4>output</h4>
+          <script type="text/javascript">
+          document.write('<p><pre id="output"></pre></p>')
+          </script>
+          
+        </div>
+      </div>
+
+
+
+
+    </div> <!-- /container -->
+
+<script>
+// CodeMirror
+var myCodeMirror = CodeMirror.fromTextArea(document.getElementById('mytext'),
+	 {
+	 	mode: "lua",
+    lineNumbers: true,
+    tabSize:2
+  });
+	myCodeMirror.setOption("theme", "monokai");
+//myCodeMirror.setSize(screen.width*0.6, screen.height*0.2);
+
+// Execution
+var outputElement = document.getElementById('output')
+var Module = {
+  print: function(x) {
+    outputElement.textContent = (outputElement.textContent ? outputElement.textContent + '\n' : '') + x;
+  }
+};
+
+function executeLua(code, clear) {
+  if (clear) {
+    outputElement.style.color = null;
+    outputElement.textContent = '';
+  }
+  try {
+    L.execute(code);
+  } catch(e) {
+    outputElement.style.color = "red";
+    outputElement.textContent = e.toString();
+  }
+}
+</script>
+
+
+
+
+<script type="text/javascript" src="http://kripken.github.io/lua.vm.js/lua.vm.js"></script>
